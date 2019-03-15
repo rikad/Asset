@@ -122,7 +122,7 @@
               <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                   <div class="form-line{{ $errors->has('category') ? ' error' : '' }}">
-                    {!! Form::select('category', ['1'=> 'ASSET','0'=>'NON-ASSET'], null, ['class' => 'form-control show-tick', 'placeholder'=>'Pilih Penanggung Jawab'] ) !!}
+                    {!! Form::select('category', ['1'=> 'ASSET','0'=>'NON-ASSET'], null, ['class' => 'form-control show-tick', 'placeholder'=>'Pilih Kategori'] ) !!}
                   </div>
                   @if ($errors->has('category'))
                       <label class="error" for="category">

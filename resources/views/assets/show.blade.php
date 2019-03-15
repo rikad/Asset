@@ -52,8 +52,8 @@
                 <b>Spesifikasi</b> : {{ $data->spesification }} <hr>
                 <b>Deskripsi</b> : {{ $data->description }} <hr>
                 <b>Kategori</b> : 
-                    @if($data->category == 0) ASSET @endif
-                    @if($data->category == 1) NON-ASSET @endif
+                    @if($data->category == 1) ASSET @endif
+                    @if($data->category == 0) NON-ASSET @endif
                 <hr>
                 <b>Di Buat</b> : {{ $data->created_at }} <hr>
                 <b>Di Perbaharui</b> : {{ $data->updated_at }} <br>
