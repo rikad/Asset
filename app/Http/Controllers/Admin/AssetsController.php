@@ -124,7 +124,7 @@ class AssetsController extends \App\Http\Controllers\Controller
 
 
         //response section
-        if (Auth::user()->can('read-assets')) {
+        if (Auth::check() && Auth::user()->can('read-assets')) {
 
             if ($request->ajax()) {
                 return $output;
