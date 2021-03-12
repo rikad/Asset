@@ -119,28 +119,36 @@
 
 @if(isset($barang))
   var data = {!! $barang !!};
+
+  if(data[0].length != 11) {
+    while(data[0].length != 11) {
+      data[0].push('');
+    }
+  }
+
 @else
   var data = [
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','','']
+      ['','','','','','','','','','',''],
+      ['','','','','','','','','','','']
     ];
 @endif
 
 @if(isset($jasa))
   var data2 = {!! $jasa !!};
+
+  if(data2[0].length != 10) {
+    while(data2[0].length != 10) {
+      data2[0].push('');
+    }
+  }
+
 @else
+
   var data2 = [
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','',''],
-      ['','','','','','','','','']
+      ['','','','','','','','','',''],
+      ['','','','','','','','','','']
     ];
+
 @endif
 
   var container = document.getElementById('data');
@@ -151,7 +159,7 @@
     data: data,
     rowHeaders: true,
     colHeaders: true,
-    colWidths: [80, 80, 160, 80, 80, 80, 80, 80, 80, 80],
+    colWidths: [80, 80, 160, 80, 80, 80, 80, 80, 80, 80, 80],
     manualColumnResize: true,
     manualRowResize: true,
     minSpareRows: 1,
@@ -168,7 +176,8 @@
       'Prioritas',
       'Kategori',
       'Usulan',
-      'Tahun'
+      'Tahun',
+      'Keterangan'
     ]
   });
 
@@ -177,7 +186,7 @@
     data: data2,
     rowHeaders: true,
     colHeaders: true,
-    colWidths: [80, 80, 160, 80, 80, 80, 80],
+    colWidths: [80, 80, 160, 80, 80, 80, 80, 80, 80, 80, 80],
     manualColumnResize: true,
     manualRowResize: true,
     minSpareRows: 1,
@@ -193,7 +202,8 @@
       'Prioritas',
       'Kategori',
       'Usulan',
-      'Tahun'
+      'Tahun',
+      'Keterangan'
     ]
   });
 
