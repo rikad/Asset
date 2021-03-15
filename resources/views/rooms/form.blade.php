@@ -13,7 +13,7 @@
       <div class="card">
         <div class="header">
           <h2>
-            Tambah Ruangan
+            Managemen Ruangan
           </h2>
         </div>
         <div class="body">

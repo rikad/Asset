@@ -98,7 +98,7 @@
       ajax: '{!! route('rooms.index') !!}',
       columns: [
       { data: 'no', name: 'no', searchable:false },
-      { data: 'name', name: 'name' },
+      { data: 'code', name: 'code' },
       { data: 'code2', name: 'code2' },
       { data: 'name', name: 'name' },
       { data: 'updated_at', name: 'updated_at' },

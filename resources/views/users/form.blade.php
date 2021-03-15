@@ -102,7 +102,7 @@
             </div>
 
 
-          @if($data->role == 4)
+          @if(isset($data) && $data->role == 4)
           @php
             $desc = json_decode($data->desc); 
           @endphp
