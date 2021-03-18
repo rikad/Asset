@@ -49,6 +49,24 @@
 
             <div class="row clearfix">
               <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                <label for="username">nip / nim / nik </label>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                <div class="form-group">
+                  <div class="form-line{{ $errors->has('noid') ? ' error' : '' }}">
+                    {!! Form::text('noid', null, ['class'=>'form-control']) !!}
+                  </div>
+                  @if ($errors->has('noid'))
+                      <label class="error" for="username">
+                          {{ $errors->first('noid') }}
+                      </label>
+                  @endif
+                </div>
+              </div>
+            </div>
+
+            <div class="row clearfix">
+              <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                 <label for="username">Username</label>
               </div>
               <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
