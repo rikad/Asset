@@ -217,7 +217,8 @@ class AssetDetailsController extends \App\Http\Controllers\Controller
 
 
         $data = $request->all();
-	$data['price'] = intval(str_replace('.','',$data['price']));
+	$data['price'] = intval
+
         $db = AssetDetail::find($id);
 
         $db->update($data);
