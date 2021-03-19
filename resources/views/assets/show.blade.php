@@ -115,7 +115,7 @@
                   <td>{{ $v->no_po }}</td>
                   <td>{{ $v->no_bst }}</td>
                   <td>{{ $v->sourcefund }}</td>
-                  <td>Rp. {{ $v->price }}</td>
+                  <td>Rp. {{ number_format($v->price,0,",",".") }}</td>
                   <td>{{ $v->year }}</td>
                   <td>
                     @if($v->condition == 0) Baik @endif

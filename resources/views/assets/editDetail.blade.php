@@ -94,12 +94,12 @@
 
             <div class="row clearfix">
               <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                <label for="price">Harga</label>
+                <label for="price">Harga (*)</label>
               </div>
               <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                 <div class="form-group">
                   <div class="form-line{{ $errors->has('price') ? ' error' : '' }}">
-                    {!! Form::text('price', null, ['class'=>'form-control']) !!}
+                    {!! Form::text('price', null, ['class'=>'form-control priceField']) !!}
                   </div>
                   @if ($errors->has('price'))
                       <label class="error" for="price">
@@ -164,4 +164,23 @@
 
 @section('css')
 <link href="{{ asset('plugins') }}/bootstrap-select/css/bootstrap-select.css" rel="stylesheet">
+@endsection
+
+@section('js')
+<script src="{{ asset('plugins') }}/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+<script>
+
+  $(".priceField").inputmask('decimal', {
+                'alias': 'numeric',
+                'groupSeparator': '.',
+                'autoGroup': true,
+                'digits': 0,
+                'radixPoint': ",",
+                'digitsOptional': false,
+                'allowMinus': false,
+                'prefix': '',
+                'placeholder': ''
+    });
+
+</script>
 @endsection
